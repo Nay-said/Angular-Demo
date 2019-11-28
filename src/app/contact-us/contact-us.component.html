@@ -1,0 +1,114 @@
+<style>
+    .card {
+        width: 50%;
+        margin: 0 auto;
+	}
+	
+	.wrap {
+		top: -1.5%;
+		left: -70%;
+		width: 50%;
+		position: absolute;
+}
+</style>
+
+<div class="card border-secondary my-3">
+    <div class="card-header text-white bg-secondary">
+        <h5><b>Contact Us</b></h5>
+    </div>
+    <div class="card-body">
+        <h5 class="mb-3">Please fill in your details:</h5>
+        <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+
+			<!-- First Name -->
+            <label for="fname">First Name</label>
+            <input type="text" class="form-control" name="fname" id="fname" formControlName="fname" placeholder="Your first name" required>
+            <div *ngIf="fname.invalid && (fname.touched)" class="alert alert-danger">
+				<div *ngIf="fname.errors.required">
+					<span>Please enter your first name</span>
+				</div>
+				<div *ngIf="fname.errors.minlength || fname.errors.maxlength">
+					<span>2 - 20 characters required</span>
+				</div>
+			</div>
+
+			<!-- Last Name -->
+            <label for="lname">Last Name</label>
+			<input type="text" class="form-control" name="lname" id="lname" formControlName="lname" placeholder="Your last name" required>
+			<div *ngIf="lname.invalid && (lname.dirty || lname.touched)" class="alert alert-danger">
+				<div *ngIf="lname.errors.required">
+					<span>Please enter your last name</span>
+				</div>
+				<div *ngIf="lname.errors.minlength || lname.errors.maxlength">
+					<span>2 - 20 characters required</span>
+				</div>
+			</div>
+	
+			<!-- Email -->
+            <label for="email">Email</label>
+			<input type="email" class="form-control" name="email" id="email" formControlName="email" placeholder="xxx@xxx.com" required>
+			<div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+				<div *ngIf="email.errors.required">
+					<span>Please enter your email address</span>
+				</div>
+				<div *ngIf="email.errors.email">
+					<span>This is not a valid email address</span>
+				</div>
+			</div>
+
+			<!-- Phone Number -->
+            <label for="phone">Phone Number</label>
+			<input type="text" class="form-control" name="phone" id="phone" formControlName="phone" placeholder="021 12345" required>
+			<div *ngIf="phone.invalid && (phone.dirty || phone.touched)" class="alert alert-danger">
+				<div *ngIf="phone.errors.required">
+					<span>Please enter your phone number</span>
+				</div>
+				<div *ngIf="phone.errors.minlength || phone.errors.maxlength">
+					<span>3 - 20 digits required</span>
+				</div>
+			</div>
+	
+			<!-- Date of Birth -->
+            <label for="birth">Date of Birth</label>
+			<input type="date" class="form-control" name="birth" id="birth" formControlName="birth" required>
+			<div *ngIf="birth.invalid && (birth.dirty || birth.touched)" class="alert alert-danger">
+				<div *ngIf="birth.errors.required">
+					<span>Please set your date of birth</span>	
+				</div>
+				<div *ngIf="birth.errors.isError">
+					<span>This date is invalid</span>
+				</div>
+			</div>
+	
+			<!-- Comments -->
+            <label for="comments">Comments</label>
+			<textarea name="comments" id="comments" class="form-control" id="comments" cols="10" rows="2" formControlName="comments" placeholder="Enter your comments here" required></textarea>
+			<div *ngIf="comments.invalid && (comments.dirty || comments.touched)" class="alert alert-danger">
+					<div *ngIf="comments.errors.required">
+						<span>Please enter your comments</span>
+					</div>
+					<div *ngIf="comments.errors.minlength || comments.errors.maxlength">
+						<span>5 - 400 characters required</span>
+					</div>
+				</div>
+    
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+
+		<div class="card wrap mt-3">
+			<div class="card-header"><h5>myForm </h5></div>
+			<div class="card-body">
+				<b>Form Status: </b> {{ myForm.status }} 
+				<hr>
+				<p class="my-2"><b>Form Value:</b></p>
+				<p>First Name: {{ fname.value }}</p>
+				<p>Last Name: {{ lname.value}} </p>
+				<p>Email {{ email.value }}</p>
+				<p>Phone: {{ phone.value }}</p>
+				<p>Birth: {{ birth.value }}</p>
+				<p>Comments: {{ comments.value }} </p>
+				<hr>
+			</div>
+		</div>
+	</div>
+</div>
