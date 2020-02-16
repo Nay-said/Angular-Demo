@@ -3,10 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ContactUsComponent } from '../contact-us/contact-us.component';
 import { ListingsComponent } from '../listings/listings.component';
+import { CalenderComponent } from '../calender/calender.component';
 
 const routes: Routes = [
 	{ path: '', component: ContactUsComponent},
 	{ path: 'listings', component: ListingsComponent},
+	{ path: 'calendar', component: CalenderComponent},
 ]
 
 @NgModule({
