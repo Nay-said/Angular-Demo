@@ -96,17 +96,19 @@
 		</form>
 
 		<div class="card wrap mt-3">
-			<div class="card-header"><h5>myForm </h5></div>
+			<div class="card-header"><h5>Two Way Data Binding</h5>
+				<span class="results"><small><i>formGroup = myForm</i></small></span>
+			</div>
 			<div class="card-body">
-				<b>Form Status: </b> {{ myForm.status }} 
+				<b>Form Status: </b> <span class="results">{{ myForm.status }}</span> 
 				<hr>
-				<p class="my-2"><b>Form Value:</b></p>
-				<p>First Name: {{ fname.value }}</p>
-				<p>Last Name: {{ lname.value}} </p>
-				<p>Email {{ email.value }}</p>
-				<p>Phone: {{ phone.value }}</p>
-				<p>Birth: {{ birth.value }}</p>
-				<p>Comments: {{ comments.value }} </p>
+				<p class="my-2"><b>Form Value</b></p>
+				<p>First Name: <span class="results">{{ fname.value }}</span></p>
+				<p>Last Name: <span class="results">{{ lname.value}}</span></p>
+				<p>Email <span class="results">{{ email.value }}</span></p>
+				<p>Phone: <span class="results">{{ phone.value }}</span></p>
+				<p>Birth: <span class="results">{{ birth.value }}</span></p>
+				<p>Comments: <span class="results">{{ comments.value }}</span></p>
 				<hr>
 			</div>
 		</div>
