@@ -1,17 +1,22 @@
-<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+<nav class="navbar navbar-dark bg-dark navbar-expand-md">
 		<a href="" class="navbar-brand ml-5"><h3>Angular Test App</h3></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> 
+            <span class="navbar-toggler-icon"></span> 
+        </button>
 
-		<ul class="navbar-nav mr-auto">
-			<li class="nav-item">
-				<a routerLink="" routerLinkActive="active" href="" class="nav-link text-white"><h6>Contact Us</h6></a>
-			</li>
-			<li class="nav-item">
-				<a routerLink="/listings" routerLinkActive="active" href="" class="nav-link text-white"><h6>Listings</h6></a>
-			</li>
-			<li class="nav-item">
-				<a routerLink="/calendar" routerLinkActive="active" href="" class="nav-link text-white"><h6>Calendar</h6></a>
-			</li>
-		</ul>
+		<div class="collapse navbar-collapse" id="navbar">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a routerLink="form" routerLinkActive="active" href="" class="nav-link text-white"><h6>Form</h6></a>
+				</li>
+				<li class="nav-item">
+					<a routerLink="/listings" routerLinkActive="active" href="" class="nav-link text-white"><h6>Listings</h6></a>
+				</li>
+				<li class="nav-item">
+					<a routerLink="/calendar" routerLinkActive="active" href="" class="nav-link text-white"><h6>Calendar</h6></a>
+				</li>
+			</ul>
+		</div>
 	</nav>
 	<div class="container">
 		<router-outlet></router-outlet>

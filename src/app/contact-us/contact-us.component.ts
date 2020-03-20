@@ -9,30 +9,30 @@ import { isError } from 'util';
   styleUrls: ['./contact-us.component.css']
 })
 export class ContactUsComponent implements OnInit {
-    myForm: FormGroup;
+  myForm: FormGroup;
 	response: any;
 
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
-      this.myForm = this.fb.group({
-        fname: ['', [Validators.required,
-                    Validators.minLength(2),
-                    Validators.maxLength(20)]],
-        lname: ['', [Validators.required,
-                    Validators.minLength(2),
-                    Validators.maxLength(20)]],
-		email: ['', [Validators.required,
-					 Validators.email]],
-		phone: ['', [Validators.required,
-					 Validators.minLength(3),
-					 Validators.maxLength(20)]],
-		birth: ['', [Validators.required,
-					 this.dateValidator]],
-        comments: ['', [Validators.required,
-                       Validators.minLength(5),
-                       Validators.maxLength(400)]],
-      });
+    this.myForm = this.fb.group({
+      fname: ['', [Validators.required,
+                  Validators.minLength(2),
+                  Validators.maxLength(20)]],
+      lname: ['', [Validators.required,
+                  Validators.minLength(2),
+                  Validators.maxLength(20)]],
+      email: ['', [Validators.required,
+            Validators.email]],
+      phone: ['', [Validators.required,
+            Validators.minLength(3),
+            Validators.maxLength(20)]],
+      birth: ['', [Validators.required,
+                   this.dateValidator]],
+      comments: ['', [Validators.required,
+                      Validators.minLength(5),
+                      Validators.maxLength(400)]],
+    });
   }
 
   get fname() {

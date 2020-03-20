@@ -1,20 +1,6 @@
-<style>
-    .card {
-        width: 50%;
-        margin: 0 auto;
-	}
-	
-	.wrap {
-		top: -1.5%;
-		left: -70%;
-		width: 50%;
-		position: absolute;
-}
-</style>
-
 <div class="card border-secondary my-3">
     <div class="card-header text-white bg-secondary">
-        <h5><b>Contact Us</b></h5>
+        <h5><b>Form</b></h5>
     </div>
     <div class="card-body">
         <h5 class="mb-3">Please fill in your details:</h5>
@@ -93,6 +79,7 @@
 				</div>
     
 			<button type="submit" class="btn btn-primary">Submit</button>
+			<a routerLink="" class="btn btn-info ml-2">Home</a>
 		</form>
 
 		<div class="card wrap mt-3">
@@ -109,7 +96,6 @@
 				<p>Phone: <span class="results">{{ phone.value }}</span></p>
 				<p>Birth: <span class="results">{{ birth.value }}</span></p>
 				<p>Comments: <span class="results">{{ comments.value }}</span></p>
-				<hr>
 			</div>
 		</div>
 	</div>

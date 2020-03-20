@@ -20,6 +20,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { DemoUtilsModule } from './calender/demo/module';
+import { HomeComponent } from './home/home.component';
 
 export function momentAdapterFactory() {
   return adapterFactory(moment);
@@ -31,6 +32,7 @@ export function momentAdapterFactory() {
     routingComponent,
 	CustomValidatorDirective,
 	CalenderComponent,
+	HomeComponent,
   ],
   imports: [
     BrowserModule,

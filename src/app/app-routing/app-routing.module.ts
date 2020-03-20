@@ -4,9 +4,11 @@ import { CommonModule } from '@angular/common';
 import { ContactUsComponent } from '../contact-us/contact-us.component';
 import { ListingsComponent } from '../listings/listings.component';
 import { CalenderComponent } from '../calender/calender.component';
+import { HomeComponent } from '../home/home.component';
 
 const routes: Routes = [
-	{ path: '', component: ContactUsComponent},
+  { path: '', component: HomeComponent},
+  { path: 'form', component: ContactUsComponent},
 	{ path: 'listings', component: ListingsComponent},
 	{ path: 'calendar', component: CalenderComponent},
 ]
