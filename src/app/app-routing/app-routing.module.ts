@@ -8,6 +8,7 @@ import { HomeComponent } from '../home/home.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
+  { path: 'angularTest', component: HomeComponent},
   { path: 'form', component: ContactUsComponent},
 	{ path: 'listings', component: ListingsComponent},
 	{ path: 'calendar', component: CalenderComponent},
