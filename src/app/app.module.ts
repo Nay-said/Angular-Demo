@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule, routingComponent } from './app-routing/app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing/app-routing.module';
 
 import { AppComponent } from './app.component';
 
@@ -29,18 +29,16 @@ export function momentAdapterFactory() {
 @NgModule({
   declarations: [
     AppComponent,
-    routingComponent,
-	CustomValidatorDirective,
-	CalenderComponent,
-	HomeComponent,
+    routingComponents,
+    CustomValidatorDirective
   ],
   imports: [
     BrowserModule,
-	ReactiveFormsModule,
-	HttpClientModule,
-	AppRoutingModule,
-	CalendarModule.forRoot({ provide: DateAdapter, useFactory: momentAdapterFactory }),
-	DemoUtilsModule
+	  ReactiveFormsModule,
+	  HttpClientModule,
+	  AppRoutingModule,
+	  CalendarModule.forRoot({ provide: DateAdapter, useFactory: momentAdapterFactory }),
+	  DemoUtilsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
