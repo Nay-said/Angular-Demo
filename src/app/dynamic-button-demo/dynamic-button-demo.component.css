@@ -1,0 +1,18 @@
+mat-card {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+span {
+    color: navy;
+}
+
+button:hover {
+    background-color: lightblue;
+}
+
+mat-form-field {
+    width: 80%;
+}

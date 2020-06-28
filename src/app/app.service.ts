@@ -12,6 +12,6 @@ export class AppService {
   }
   url:string = "https://jsonplaceholder.typicode.com/posts?_limit=10";
   getListings():Observable<Listing[]> {
-	return this.http.get<Listing[]>(this.url);
+	  return this.http.get<Listing[]>(this.url);
   }
 }
