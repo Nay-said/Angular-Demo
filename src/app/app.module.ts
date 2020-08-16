@@ -21,8 +21,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
-import { MatInputModule } from '@angular/material';
+import { MatInputModule, MatIconModule } from '@angular/material';
 import { MatTableModule } from '@angular/material/table';
+import { TxtUploadComponent } from './abstract-components/txt-upload/txt-upload.component';
 
 export function momentAdapterFactory() {
   return adapterFactory(moment);
@@ -36,7 +37,8 @@ export function momentAdapterFactory() {
     DynamicButtonComponent,
     DynamicButtonDemoComponent,
     TestAreaComponent,
-    PlaygroundComponent
+    PlaygroundComponent,
+    TxtUploadComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +54,8 @@ export function momentAdapterFactory() {
     MatFormFieldModule,
     MatSelectModule,
     MatInputModule,
-    MatTableModule
+    MatTableModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

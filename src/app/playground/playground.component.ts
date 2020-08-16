@@ -31,6 +31,7 @@ export class PlaygroundComponent implements OnInit {
       this.transferSettingsForm.controls
     )
     this.getData()
+    this.foo()
   }
 
   getData() {
@@ -83,4 +84,18 @@ export class PlaygroundComponent implements OnInit {
       })
     )
   }
+
+  foo() {
+    let S = 0
+    let T = 0
+    let n = 100
+    while (n >= 2) {
+      S = S + n
+      n = n - 1
+      T = T + n
+      n = n - 1
+    }
+    console.log(S, T)
+  }
+  // https://www.bilibili.com/video/BV1fW411X7WC
 }
