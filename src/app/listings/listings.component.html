@@ -3,7 +3,8 @@
 		<h5>Listings</h5>
 	</div>
 	<div class="card-body">
-		<!-- {{ listings.length }} -->
+		<mat-spinner id="spinner" *ngIf="showSpinner == true">
+		</mat-spinner>
 		<ul *ngFor="let listing of listings">
 			<li>
 				<h5>Listing {{ listing.id }}.</h5>

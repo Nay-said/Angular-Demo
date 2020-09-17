@@ -8,14 +8,20 @@ import { Listing } from '../models/listing';
   styleUrls: ['./listings.component.css']
 })
 export class ListingsComponent implements OnInit {
-
-  listings:Listing[];
+  showSpinner: Boolean = false
+  listings: Listing[];
   
   constructor(private service:AppService) { }
 
   ngOnInit() {
-	  this.service.getListings().subscribe(listings => {
-		  this.listings = listings;
+    this.fetchData()
+    if (!this.listings) this.showSpinner = true
+  }
+
+  fetchData() {
+    this.service.getListings().subscribe(listings => {
+      this.listings = listings;
+      this.showSpinner = false
 	  });
-  } 
+  }
 }

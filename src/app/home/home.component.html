@@ -1,17 +1,24 @@
 <div class="row">
     <div class="jumbotron col-xl-8 col-lg-8 col-md-10 col-sm-10 col-xs-10">
-        <h3>Angular 8 Demo App</h3>
-        <!-- <address class="pb-3">
+        <h3>Welcome to Angular 8 Demo App</h3>
+        <address class="pb-3">
             <i>By 
-                <a href="mailto:hengyu816@outlook.com">Hengyu Shi </a>
-                <span>(Nay_said)</span>
+                <a href="mailto:hengyu.shi@outlook.com">Hengyu Shi </a>
+                <span>('Nay_said' on GitHub)</span>
             </i>
         </address>
-        <hr> -->
-        <div class="menu">
-            <a routerLink="form" routerLinkActive="active" class="btn btn-info mx-2">Reactive Form</a>
-            <a routerLink="listings" routerLinkActive="active" class="btn btn-info mx-2">Listings</a>
-            <a routerLink="calendar" routerLinkActive="active" class="btn btn-info mx-2">Calendar</a>
+        <hr>
+        <div class="menu px-4">
+            <div>
+                <span class="pr-3" style="width: 200px;">Functional Modules</span>
+                <button routerLink="form" routerLinkActive="active" class="btn btn-info mx-2">Reactive Form</button>
+                <button routerLink="listings" routerLinkActive="active" class="btn btn-info mx-2">Listings</button>
+                <button routerLink="calendar" routerLinkActive="active" class="btn btn-info mx-2">Calendar</button>
+            </div>
+            <div class="mt-5">
+                <span class="w-25 pr-3">Abstractive Compnents</span>
+                <button routerLink="dynamic-button" routerLinkActive="active" class="btn btn-info mx-2">Dynamic Button</button>
+            </div>
         </div>
     </div>
 </div>

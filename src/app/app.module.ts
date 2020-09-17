@@ -23,6 +23,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule, MatIconModule } from '@angular/material';
 import { MatTableModule } from '@angular/material/table';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { TxtUploadComponent } from './abstract-components/txt-upload/txt-upload.component';
 
 export function momentAdapterFactory() {
@@ -55,7 +56,8 @@ export function momentAdapterFactory() {
     MatSelectModule,
     MatInputModule,
     MatTableModule,
-    MatIconModule
+    MatIconModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

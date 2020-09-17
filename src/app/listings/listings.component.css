@@ -8,6 +8,11 @@
     overflow-y: scroll;
 }
 
+#spinner {
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
 li {
     list-style: none;
 }
