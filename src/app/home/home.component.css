@@ -2,6 +2,18 @@ i {
     margin-left: 3%;
 }
 
+h3 {
+    color: grey;
+}
+
+button:hover {
+    background-color: lightblue;
+}
+
+span {
+    color: grey;
+}
+
 .jumbotron {
     margin: 0 auto;
     margin-top: 5%;
