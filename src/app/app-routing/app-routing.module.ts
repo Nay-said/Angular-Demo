@@ -7,11 +7,13 @@ import { CalenderComponent } from '../calender/calender.component';
 import { HomeComponent } from '../home/home.component';
 import { DynamicButtonDemoComponent } from '../dynamic-button-demo/dynamic-button-demo.component';
 import { PlaygroundComponent } from '../playground/playground.component';
+import { FormArrayComponent } from '../forms/form-array/form-array.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'angularTest', component: HomeComponent},
-  { path: 'form', component: ContactUsComponent},
+  { path: 'dynamic-form', component: ContactUsComponent},
+  { path: 'form-array', component: FormArrayComponent},
 	{ path: 'listings', component: ListingsComponent},
   { path: 'calendar', component: CalenderComponent},
   { path: 'dynamic-button', component: DynamicButtonDemoComponent},

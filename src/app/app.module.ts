@@ -26,6 +26,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatMenuModule } from '@angular/material/menu';
 import { TxtUploadComponent } from './abstract-components/txt-upload/txt-upload.component';
+import { FormArrayComponent } from './forms/form-array/form-array.component';
 
 export function momentAdapterFactory() {
   return adapterFactory(moment);
@@ -40,7 +41,8 @@ export function momentAdapterFactory() {
     DynamicButtonDemoComponent,
     TestAreaComponent,
     PlaygroundComponent,
-    TxtUploadComponent
+    TxtUploadComponent,
+    FormArrayComponent
   ],
   imports: [
     BrowserModule,

@@ -5,25 +5,25 @@
           <span>
                 <i>By 
                     <a href="mailto:hengyu.shi@outlook.com">Hengyu Shi </a>
-                    <span>('Nay_said' on GitHub)</span>
+                    <span style="font-size: 13px;">aka 'Nay_said' on GitHub</span>
                 </i>
           </span>
         </address>
         <hr>
         <div class="menu px-4">
             <div>
-                <span class="pr-3" style="width: 200px;">Functional Modules</span>
+                <span class="pr-3" style="width: 200px;">Functional Components</span>
                 <button mat-raised-button [matMenuTriggerFor]="formsMenu" color="primary" class="mx-2">
                     Forms
                 </button>
                 <mat-menu #formsMenu="matMenu">
-                    <span mat-menu-item routerLink="form">
+                    <span mat-menu-item routerLink="dynamic-form">
                         Reactive Form
                     </span>
                     <span mat-menu-item routerLink="form">
                         Template Driven Form
                     </span>
-                    <span mat-menu-item routerLink="form">
+                    <span mat-menu-item routerLink="form-array">
                         Form Array
                     </span>
                 </mat-menu>
@@ -34,6 +34,7 @@
             <div class="mt-5">
                 <span class="w-25 pr-3">Abstractive Compnents</span>
                 <button routerLink="dynamic-button" mat-raised-button color="primary" class="mx-2">Dynamic Button</button>
+                <button routerLink="file" mat-raised-button color="primary" class="mx-2">TXT Upload</button>
             </div>
         </div>
     </div>

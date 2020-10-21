@@ -1,0 +1,28 @@
+mat-form-field {
+  padding-top: 0 !important;
+  padding-left: 0 !important;
+}
+textarea {
+  height: 50px;
+}
+td > mat-form-field {
+  width: 80%;
+}
+p {
+  font-weight: bold;
+  color: #a8a8a8;
+}
+.resetButton {
+    background-color: #e6b650; 
+    color: white;
+}
+.resetButton:hover {
+    background-color: wheat;
+}
+.newButton {
+    background-color: #26c6da; 
+    color: white;
+}
+.newButton:hover {
+    background-color: #59e3f5;
+}
