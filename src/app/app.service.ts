@@ -10,7 +10,9 @@ export class AppService {
   constructor(private http: HttpClient) { 
 	//   console.log("service conected");
   }
+
   url:string = "https://jsonplaceholder.typicode.com/posts?_limit=10";
+  
   getListings():Observable<Listing[]> {
 	  return this.http.get<Listing[]>(this.url);
   }

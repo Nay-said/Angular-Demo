@@ -6,8 +6,6 @@ import { Component, Input, OnChanges } from '@angular/core';
   styleUrls: ['./dynamic-button.component.css']
 })
 
-/* Demo for Dynamic Button can be found in finance-invoice-sales component */
-
 /* Dynamic Button Interface Standards:
     This component takes in One input value: buttonConfig
       e.g.    buttonConfig = {
@@ -20,7 +18,7 @@ import { Component, Input, OnChanges } from '@angular/core';
     *The color property set the ccolor schemeof the button, for now only support FOUR color set: Basic, Primary, Accent, Warn; which defined by Angular Material.
 
     * In the demo, if no button name was given, then the default button name 
-      "Sample Button" will be applied.
+      "Dynamic Button" will be applied.
     * In the demo, if no color was specified, Angular Matrial will apply 
       'Basic' color scheme.
 */

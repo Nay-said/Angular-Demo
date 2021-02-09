@@ -3,13 +3,13 @@
         <h5><b>Form</b></h5>
     </div>
     <div class="card-body">
-        <h5 class="mb-3">Please fill in your details:</h5>
-        <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+			<h5 class="mb-3">Please fill in your details:</h5>
+			<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
 
 			<!-- First Name -->
-            <label for="fname">First Name</label>
-            <input type="text" class="form-control" name="fname" id="fname" formControlName="fname" placeholder="Your first name" required>
-            <div *ngIf="fname.invalid && (fname.touched)" class="alert alert-danger">
+			<label for="fname">First Name</label>
+			<input type="text" class="form-control" name="fname" id="fname" formControlName="fname" placeholder="Your first name" required>
+			<div *ngIf="fname.invalid && (fname.touched)" class="alert alert-danger">
 				<div *ngIf="fname.errors.required">
 					<span>Please enter your first name</span>
 				</div>
@@ -19,7 +19,7 @@
 			</div>
 
 			<!-- Last Name -->
-            <label for="lname">Last Name</label>
+			<label for="lname">Last Name</label>
 			<input type="text" class="form-control" name="lname" id="lname" formControlName="lname" placeholder="Your last name" required>
 			<div *ngIf="lname.invalid && (lname.dirty || lname.touched)" class="alert alert-danger">
 				<div *ngIf="lname.errors.required">
@@ -67,7 +67,7 @@
 			</div>
 	
 			<!-- Comments -->
-            <label for="comments">Comments</label>
+			<label for="comments">Comments</label>
 			<textarea name="comments" id="comments" class="form-control" id="comments" cols="10" rows="2" formControlName="comments" placeholder="Enter your comments here" required></textarea>
 			<div *ngIf="comments.invalid && (comments.dirty || comments.touched)" class="alert alert-danger">
 					<div *ngIf="comments.errors.required">

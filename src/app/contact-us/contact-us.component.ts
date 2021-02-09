@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Directive, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import * as moment from 'moment';
 
@@ -63,15 +63,15 @@ export class ContactUsComponent implements OnInit {
   }
 
   dateValidator(control: FormControl) {
-	const inputDate = control.value;
-	const threshold = moment().subtract(100, 'years')
+    const inputDate = control.value;
+    const threshold = moment().subtract(100, 'years')
 
-	if ( moment(inputDate).isAfter(moment()) || moment(inputDate).isBefore(threshold) ) {
-		return {
-			isError: true
-		}
-	}
-	// console.log (moment(inputDate).isAfter(threshold));
-	return null;
+    if ( moment(inputDate).isAfter(moment()) || moment(inputDate).isBefore(threshold) ) {
+      return {
+        isError: true
+      }
+    }
+    // console.log (moment(inputDate).isAfter(threshold));
+    return null;
   }
 }
